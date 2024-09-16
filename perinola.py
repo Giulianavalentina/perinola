@@ -1,15 +1,19 @@
 from random import choice
 
-class perinola:
+
+class Perinola:
     def __init__(self):
-        self.cara_invisible = "Pon 1"
-    def __repr__(self) :
-        return f"Salió: {self.cara_invisible}"
+        self.caras = ["Pon 1", "Pon 2", "Toma 1", "Toma 2", "Todos Toman", "Ponen Todos"]
+        self.cara_visible = random.choice(self.caras)
+    
     def tirar(self):
-        caras = ("Pon 1", "Toma 2", "Todos Ponen",
-            "Toma 1", "Pon 2", "Toma todo")
-    self.cara_invisible = choice(caras)
-    return self.cara_invisible
+        self.cara_visible = random.choice(self.caras)
+        return self.cara_visible
+    
+    def __str__(self):
+        return f"Salió: {self.cara_visible}"
+
+
 
 #
 #fichas = [5, 5, 5, 5]
