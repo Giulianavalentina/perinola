@@ -8,7 +8,7 @@ class Apuesta:
     def ponerFicha(self, cuantas=1):
         """Agrega la cantidad especificada de fichas a la apuesta."""
         self.fichas += cuantas
-
+ 
     def tomarFicha(self, cuantas=1):
         """Quita la cantidad especificada de fichas de la apuesta. 
         Lanza un error si se intenta sacar más fichas de las que hay."""
