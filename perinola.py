@@ -15,13 +15,13 @@ class Perinola:
 
 
 
-#
+
 #fichas = [5, 5, 5, 5]
 #nombres = ["j1", "j2", "j3", "j4"]
 #apuesta = 0
 #
 #def tirarPerinola():
-#    caras = ("Pon 1", "Toma 2", "Todos Ponen",
+#   caras = ("Pon 1", "Toma 2", "Todos Ponen",
 #     "Toma 1", "Pon 2", "Toma Todo")
 #    return choice(caras)
 #
@@ -114,3 +114,58 @@ class Perinola:
 #    print()
 #
 #print(f"Terminó el juego, ganó: {nombres[0]}")
+
+p = Perinola()
+print(p)
+
+apuesta = Apuesta()
+
+apuesta.ponerFicha(5)
+print(apuesta)  
+
+apuesta.tomarFicha(2)
+print(apuesta)  
+
+
+print(apuesta.tieneFicha(3))  
+print(apuesta.estaVacia())    
+
+
+todas = apuesta.tomarTodas()
+print(f"Se tomaron {todas} fichas")  
+print(apuesta.estaVacia())          
+
+
+
+
+jugador = Jugador("Tomas", 15)
+print(jugador) 
+
+jugador.darFicha(5)
+print(jugador) 
+
+jugador.sacarFicha(3)
+print(jugador) 
+
+print(jugador.tieneFicha(10))  
+print(jugador.sinFichas())     
+
+
+
+ronda = Ronda()
+
+
+ronda.agregarJugador(jugador1) 
+ronda.agregarJugador(jugador2) 
+
+
+print(ronda)
+
+print(ronda.jugadorEnTurno()) 
+
+ronda.pasarTurno()
+print(ronda.jugadorEnTurno())  
+
+ronda.sacarJugadoresSinFichas()
+
+print(ronda.quedaUnSoloJugador())
